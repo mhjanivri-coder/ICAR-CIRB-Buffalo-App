@@ -1,5 +1,52 @@
-html, body, #root { margin: 0; min-height: 100%; font-family: Arial, Helvetica, sans-serif; }
+html, body, #root { margin: 0; min-height: 100%; font-family: Arial, Helvetica, sans-serif; background: #f8fafc; color: #1e293b; }
 * { box-sizing: border-box; }
-.min-h-screen{min-height:100vh}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-4{padding-left:1rem;padding-right:1rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}
-.mb-3{margin-bottom:.75rem}.mt-1{margin-top:.25rem}.mx-auto{margin-left:auto;margin-right:auto}.max-w-7xl{max-width:1280px}.grid{display:grid}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.flex{display:flex}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-end{align-items:flex-end}.justify-between{justify-content:space-between}.text-sm{font-size:.9rem}.text-3xl{font-size:2rem}.font-medium{font-weight:500}.font-bold{font-weight:700}.rounded-xl{border-radius:.9rem}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.bg-white{background:white}.bg-white\/90{background:rgba(255,255,255,.9)}.bg-emerald-600{background:#059669}.text-white{color:#fff}.text-slate-600{color:#475569}.text-slate-800{color:#1e293b}.text-emerald-800{color:#065f46}.text-emerald-900{color:#064e3b}.border{border:1px solid #d1fae5}.border-emerald-100{border-color:#d1fae5}.border-emerald-300{border-color:#6ee7b7}.shadow-xl{box-shadow:0 12px 30px rgba(0,0,0,.08)}.ring-1{box-shadow:0 0 0 1px rgba(110,231,183,.35)}
-button{cursor:pointer;font:inherit} @media (min-width:768px){.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:justify-between{justify-content:space-between}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}} @media (min-width:1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.app-shell { min-height: 100vh; padding: 1rem; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.max-w-7xl { max-width: 1280px; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.rounded-2xl { border-radius: 1rem; }
+.rounded-3xl { border-radius: 1.5rem; }
+.border { border: 1px solid #d1fae5; }
+.border-emerald-100 { border-color: #d1fae5; }
+.bg-white { background: white; }
+.p-4 { padding: 1rem; }
+.p-5 { padding: 1.25rem; }
+.shadow-md { box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+.shadow-xl { box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.topbar { display: flex; justify-content: space-between; align-items: flex-end; gap: 1rem; flex-wrap: wrap; }
+.title { font-size: 2rem; font-weight: 700; color: #064e3b; }
+.subtitle { margin-top: 0.25rem; color: #475569; }
+.primary-btn, .secondary-btn {
+  border-radius: 0.9rem; padding: 0.75rem 1rem; font: inherit; cursor: pointer; border: 1px solid #6ee7b7;
+}
+.primary-btn { background: #059669; color: white; }
+.secondary-btn { background: white; color: #065f46; }
+.stats-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(1, minmax(0,1fr)); }
+.main-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+.field { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.95rem; }
+.field input, .field select, .field textarea {
+  width: 100%; border: 1px solid #a7f3d0; border-radius: 0.9rem; padding: 0.7rem 0.9rem; font: inherit; background: white;
+}
+.textarea-field { grid-column: span 1; }
+.action-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem; }
+.list-wrap { display: grid; gap: 0.75rem; margin-top: 1rem; }
+.animal-card {
+  text-align: left; border: 1px solid #d1fae5; border-radius: 1rem; padding: 0.85rem 1rem; background: white; cursor: pointer;
+}
+.animal-card.selected { background: #ecfdf5; border-color: #059669; }
+.animal-title { font-weight: 700; }
+.animal-sub { color: #475569; font-size: 0.92rem; margin-top: 0.2rem; }
+.empty-note { color: #64748b; padding: 0.75rem 0; }
+.preview-grid { display: grid; gap: 0.75rem; grid-template-columns: 1fr; }
+.grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(1, minmax(0,1fr)); }
+.text-lg { font-size: 1.125rem; }
+.font-semibold { font-weight: 600; }
+.text-emerald-900 { color: #064e3b; }
+.text-emerald-700 { color: #047857; }
+@media (min-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+  .main-grid { grid-template-columns: 420px 1fr; }
+  .grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+  .preview-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .textarea-field { grid-column: span 3; }
+}
