@@ -1,3 +1,3 @@
-# Buffalo Animal Data Recording App
+# Patched Add Animal Build
 
-Deploy-ready Vite project.
+This version fixes the Add Animal button by rendering the form and saving basic herd records.
